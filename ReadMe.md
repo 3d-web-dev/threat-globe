@@ -5,4 +5,4 @@
 - yarn
 
 #To run 
-yarn start
+- yarn start
