@@ -1,9 +1,8 @@
 import "../sass/styles.scss";
 import $ from "jquery";
 import Scene from "./Scene";
+// import { updateColumn } from './components/columns/buildColumns';
 import { handleData } from "./components/columns/handleData";
-import { generateValues } from "./components/columns/handleData";
-
 const APP = window.APP || {};
 
 const initApp = () => {
@@ -19,28 +18,23 @@ if (document.readyState === "complete" || (document.readyState !== "loading" && 
   document.addEventListener("DOMContentLoaded", initApp);
 }
 
-// var worker = new Worker("src/js/worker.js", { type: "module" });
+var worker = new Worker("src/js/worker.js", { type: "module" });
 
-// setTimeout(() => {
-//   fetch("src/js/components/globe/server.json").then((data) => {
-//     data.json().then((jsonData) => {
-//       const jsonForSend = {
-//         data: handleData(jsonData)
-//       };
-//       const data = JSON.stringify(jsonForSend);
-//       worker.postMessage(data);
-//     });
-//   });
-// }, 2000);
-
-// worker.onmessage = function (e) {
-//   const jsonData = JSON.parse(e.data);
-//   APP.Scene.updateColumns(jsonData.data);
-// };
-
-fetch("./server.json").then((data) => {
-  data.json().then((jsonData) => {
-    const data = handleData(jsonData);
-    APP.Scene.updateColumns(generateValues(data));
+// if change the url , the column is updated
+// setInterval(() => {
+setTimeout(() => {
+  fetch("src/js/components/globe/server.json").then((data) => {
+    data.json().then((jsonData) => {
+      const jsonForSend = {
+        data: handleData(jsonData)
+      };
+      const data = JSON.stringify(jsonForSend);
+      worker.postMessage(data);
+    });
   });
-});
+}, 2000);
+
+worker.onmessage = function (e) {
+  const jsonData = JSON.parse(e.data);
+  APP.Scene.updateColumns(jsonData.data);
+};

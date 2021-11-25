@@ -56,33 +56,33 @@ function createLenseflare(scene, assets) {
 export const loadAssets = (func) => {
   Promise.all([
     new Promise((resolve) => {
-      new GLTFLoader().load("./img/models/satellite.glb", resolve);
+      new GLTFLoader().load("src/img/models/satellite.glb", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/earthMap.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/earthMap.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/earthBumpMap.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/earthBumpMap.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/earthSpecMap.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/earthSpecMap.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/space.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/space.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/cloudmap.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/cloudmap.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/cloudmaptrans.jpg", resolve);
+      new THREE.TextureLoader().load("src/img/textures/cloudmaptrans.jpg", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/lensflare0.png", resolve);
+      new THREE.TextureLoader().load("src/img/textures/lensflare0.png", resolve);
     }),
     new Promise((resolve) => {
-      new THREE.TextureLoader().load("./img/textures/lensflare3.png", resolve);
+      new THREE.TextureLoader().load("src/img/textures/lensflare3.png", resolve);
     }),
-    loadImage("./img/textures/map.png")
+    loadImage("src/img/textures/map.png")
     // fetch('src/js/components/globe/server.json')
   ]).then((assetsArray) => {
     const assets = {

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="280" viewBox="0 0 280 280">
+  <title>Translate Backward</title>
+  <defs>
+    <radialGradient id="gradient-bg-translate-backward" cx="140" cy="485" r="1200" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563eb"></stop>
+      <stop offset="0.25" stop-color="#1d4ed8"></stop>
+      <stop offset="0.75" stop-color="#1E40AF"></stop>
+      <stop offset="1" stop-color="#1E3A8A"></stop>
+    </radialGradient>
+    <linearGradient id="gradient-edge-translate-backward" x1="140" y1="-10" x2="140" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2563EB"></stop>
+      <stop offset="0.5" stop-color="#3B82F6"></stop>
+      <stop offset="1" stop-color="#60A5FA"></stop>
+    </linearGradient>
+  </defs>
+  <path class="bg" fill="url(#gradient-bg-translate-backward)" d="M125.69,277.69c6.2,0,10.32.35,15.74-7.89,22.28-33.86,71.89-58.51,120.58-70.25a20.76,20.76,0,0,0,16-19.88V118.1C278,46.66,233.39,2.31,177.48,2.31h-75C46.61,2.31,2,46.66,2,118.1v81a78.6,78.6,0,0,0,78.6,78.61Z"></path>
+  <path class="tip" d="M63.61,29.91H216.39c6.79,0,14.63-2.73,21.24-6.93C220.9,9.59,200.12,2.31,177.48,2.31h-75C79.88,2.31,59.09,9.59,42.37,23,49,27.18,56.81,29.91,63.61,29.91Z"></path>
+  <path class="edge" fill="url(#gradient-edge-translate-backward)" d="M177.48,2.31h-75C46.61,2.31,2,46.66,2,118.1v39.3C2,86,46.61,41.61,102.52,41.61h75C233.39,41.61,278,86,278,157.4V118.1C278,46.66,233.39,2.31,177.48,2.31Z"></path>
+  <path class="fg" d="M181.63,140a5.55,5.55,0,0,1-5.53,5.55H103.9a5.55,5.55,0,0,1,0-11.1h72.2A5.52,5.52,0,0,1,181.63,140Z" fill="white" stroke-width="4" stroke="white"></path>
+</svg>
